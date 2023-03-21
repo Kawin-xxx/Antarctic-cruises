@@ -1,0 +1,63 @@
+.promo {
+  margin-top: -115px;
+  padding: 270px 0 287px 0;
+  background-image: url("../img/promo-background.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include vp-1023 {
+    background-image: url("../img/promo-background-tablet.jpg");
+    padding: 297px 0 276px 0;
+  }
+
+  @include vp-767 {
+    padding: 227px 0 176px 0;
+    background-size: cover;
+  }
+}
+
+.promo__container {
+  padding-left: 133px;
+}
+
+.promo h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  margin-bottom: 12px;
+
+  @include vp-1023 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.promo p {
+  & br {
+    display: none;
+  }
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+
+    & br {
+      display: block;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание проекта">
     <title>Antarctic-cruises</title>
     <link rel="stylesheet" href="css/style.min.css">
@@ -19,13 +19,68 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="main-header">
+        <div class="main-header__container container">
+          <a class="main-header__logo" href="index.html">
+            <svg width="70" height="38" role="img" aria-hidden="true" focusable="false" aria-label="Логотип Antarctic-cruises.">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+            <span class="visually-hidden">Интернет-магазин Smart Device.</span>
+          </a>
+
+          <ul class="main-header__site-list">
+            <li class="main-header__site-item">
+              <a href="#">Преимущества</a>
+            </li>
+
+            <li class="main-header__site-item">
+              <a href="#">Направления</a>
+            </li>
+
+            <li class="main-header__site-item">
+              <a href="#">Ближайшие круизы</a>
+            </li>
+
+            <li class="main-header__site-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <button class="main-header__toggle main-header__toggle--close" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+        </div>
       </header>
       <main>
-        ff
+        <section class="promo">
+          <div class="promo__container container">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир<br> айсбергов и&nbsp;пингвинов</p>
+          </div>
+        </section>
+
+        <section class="info">
+          <div class="info__container container">
+            <div class="info__text-wrapper">
+              <h2>Путешествие<br> на&nbsp;край Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе
+                с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас
+                на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги,
+                несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
+              </p>
+            </div>
+
+            <div class="info__image-wrapper">
+              <picture>
+                <source media="(max-width: 767.9px)" srcset="img/penguins.jpg" width="100%">
+                <source media="(max-width: 1023.9px)" srcset="img/penguins.jpg" width="324" height="174">
+                <img loading="lazy" src="img/penguins.jpg" width="560" height="302" alt="Пингвины.">
+              </picture>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer>
+      <footer class="main-footer">
         <div class="container"></div>
       </footer>
     </div>
