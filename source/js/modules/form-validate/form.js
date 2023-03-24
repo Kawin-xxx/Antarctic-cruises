@@ -59,7 +59,8 @@ export class Form {
   }
 
   _onFormSubmit(event, callback = null) {
-    if (this.validateForm(event.target) && callback) {
+    const result = this.validateForm(event.target);
+    if (result === true && callback) {
       this._callbacks[callback].successCallback(event);
       if (this._callbacks[callback].reset) {
         setTimeout(() => {
@@ -68,11 +69,15 @@ export class Form {
       }
       return;
     }
-    if (!this.validateForm(event.target) && callback) {
+    if (result === false && callback) {
       this._callbacks[callback].errorCallback(event);
       return;
     }
+    if (result === true) {
+      event.target.submit();
+    }
   }
+
 
   _onFormInput(item) {
     this.validateFormElement(item);
