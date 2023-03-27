@@ -16,7 +16,9 @@ export let initMenu = () => {
     navItem.addEventListener('click', closeMenu);
   });
 
-  overlay.addEventListener('click', closeMenu);
+  if (overlay) {
+    overlay.addEventListener('click', closeMenu);
+  }
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
