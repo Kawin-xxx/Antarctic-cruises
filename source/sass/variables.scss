@@ -31,7 +31,7 @@ $fz-default:                        16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$montserrat: "Montserrat", "Arial", sans-serif;
+$montserrat:                        "Montserrat", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
@@ -54,8 +54,13 @@ $trans-600:                         0.6s $tf-default;
 //$vp-1280:                           1280px;
 //$vp-1440:                           1440px;
 //$vp-1920:                           1920px;
+
+$vp-768:                            768.9px;
+$vp-1024:                           1024.9px;
+/*
 $vp-768:                            768px;
 $vp-1024:                           1024px;
+*/
 
 // Retina
 // ---------------------------------

@@ -31,7 +31,7 @@
 
           <ul class="main-header__site-list">
             <li class="main-header__site-item">
-              <a href="#">Преимущества</a>
+              <a href="#advantages">Преимущества</a>
             </li>
 
             <li class="main-header__site-item">
@@ -39,11 +39,11 @@
             </li>
 
             <li class="main-header__site-item">
-              <a href="#">Ближайшие круизы</a>
+              <a href="#catalog">Ближайшие круизы</a>
             </li>
 
             <li class="main-header__site-item">
-              <a href="#">Контакты</a>
+              <a href="#contacts">Контакты</a>
             </li>
           </ul>
 
@@ -60,7 +60,7 @@
           </div>
         </section>
 
-        <section class="info">
+        <section class="info" id="info">
           <div class="info__container container">
             <div class="info__text-wrapper">
               <h2>Путешествие<br> на&nbsp;край Земли</h2>
@@ -73,15 +73,14 @@
 
             <div class="info__image-wrapper">
               <picture>
-                <source media="(max-width: 767.9px)" srcset="img/penguins.jpg">
-                <source media="(max-width: 1023.9px)" srcset="img/penguins.jpg" width="324" height="174">
-                <img loading="lazy" src="img/penguins.jpg" width="560" height="302" alt="Пингвины.">
+                <source type="image/webp" srcset="img/penguins.webp, img/penguins@2x.webp 2x">
+                <img loading="lazy" src="img/penguins.jpg" srcset="img/penguins@2x.jpg 2x" width="560" height="302" alt="Пингвины.">
               </picture>
             </div>
           </div>
         </section>
 
-        <section class="advantages">
+        <section class="advantages" id="advantages">
           <div class="advantages__container container">
             <h2>Преимущества</h2>
 
@@ -97,7 +96,7 @@
               <li class="advantages__item advantages__item--all-inclusive">
                 <h3>Система<br> все&nbsp;включено</h3>
                 <p>
-                  Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;.
+                  Все наши круизы работают по&nbsp;системе “Все Включено“.
                   Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
                 </p>
               </li>
@@ -113,12 +112,19 @@
           </div>
         </section>
 
-        <section class="catalog">
+        <section class="catalog" id="catalog">
           <div class="catalog__container container">
             <h2>Ближайшие круизы</h2>
 
             <ul class="catalog__list">
-              <li class="catalog__item catalog__item--astoria" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-astoria-mobile.webp, img/catalog/cruises-astoria-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-astoria-tablet.webp, img/catalog/cruises-astoria-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-astoria-tablet.webp, img/catalog/cruises-astoria-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-astoria-tablet.jpg" srcset="img/catalog/cruises-astoria-tablet.jpg 2x" width="260" height="386" alt="Астория.">
+                </picture>
+
                 <h3>Круиз “Астория”</h3>
 
                 <dl>
@@ -138,7 +144,14 @@
                 <a class="catalog__button" href="#">Забронировать</a>
               </li>
 
-              <li class="catalog__item catalog__item--astoria" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-astoria-mobile.webp, img/catalog/cruises-astoria-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-astoria-tablet.webp, img/catalog/cruises-astoria-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-astoria-tablet.webp, img/catalog/cruises-astoria-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-astoria-tablet.jpg" srcset="img/catalog/cruises-astoria-tablet.jpg 2x" width="260" height="386" alt="Элайн.">
+                </picture>
+
                 <h3>Круиз “Элайн”</h3>
 
                 <dl>
@@ -155,10 +168,17 @@
                   <dd>от&nbsp;14500&nbsp;$</dd>
                 </dl>
 
-                <a class="catalog__button" href="Alline.html">Забронировать</a>
+                <a class="catalog__button" href="#" tabindex="0">Забронировать</a>
               </li>
 
-              <li class="catalog__item catalog__item--atlantis" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-atlantis-mobile.webp, img/catalog/cruises-atlantis-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-atlantis-tablet.webp, img/catalog/cruises-atlantis-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-atlantis-tablet.webp, img/catalog/cruises-atlantis-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-atlantis-tablet.jpg" srcset="img/catalog/cruises-atlantis-tablet.jpg 2x" width="260" height="386" alt="Атлантис.">
+                </picture>
+
                 <h3>Круиз “Атлантис”</h3>
 
                 <dl>
@@ -175,10 +195,17 @@
                   <dd>от&nbsp;14500&nbsp;$</dd>
                 </dl>
 
-                <a class="catalog__button" href="Alline.html">Забронировать</a>
+                <a class="catalog__button" href="#">Забронировать</a>
               </li>
 
-              <li class="catalog__item catalog__item--odysseus" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-odysseus-mobile.webp, img/catalog/cruises-odysseus-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-odysseus-tablet.webp, img/catalog/cruises-odysseus-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-odysseus-tablet.webp, img/catalog/cruises-odysseus-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-odysseus-tablet.jpg" srcset="img/catalog/cruises-odysseus-tablet.jpg 2x" width="270" height="386" alt="Одиссей.">
+                </picture>
+
                 <h3>Круиз “Одиссей”</h3>
 
                 <dl>
@@ -195,10 +222,17 @@
                   <dd>от&nbsp;9700&nbsp;$</dd>
                 </dl>
 
-                <a class="catalog__button" href="Alline.html">Забронировать</a>
+                <a class="catalog__button" href="#">Забронировать</a>
               </li>
 
-              <li class="catalog__item catalog__item--olympia" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-olympia-mobile.webp, img/catalog/cruises-olympia-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-olympia-tablet.webp, img/catalog/cruises-olympia-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-olympia-tablet.webp, img/catalog/cruises-olympia-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-olympia-tablet.jpg" srcset="img/catalog/cruises-olympia-tablet.jpg 2x" width="270" height="386" alt="Олимпия.">
+                </picture>
+
                 <h3>Круиз “Олимпия”</h3>
                 <dl>
                   <dt>Маршрут</dt>
@@ -214,10 +248,17 @@
                   <dd>от&nbsp;18600&nbsp;$</dd>
                 </dl>
 
-                <a class="catalog__button" href="Alline.html">Забронировать</a>
+                <a class="catalog__button" href="#">Забронировать</a>
               </li>
 
-              <li class="catalog__item catalog__item--aurora" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-aurora-mobile.webp, img/catalog/cruises-aurora-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-aurora-tablet.webp, img/catalog/cruises-aurora-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-aurora-tablet.webp, img/catalog/cruises-aurora-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-aurora-tablet.jpg" srcset="img/catalog/cruises-aurora-tablet.jpg 2x" width="270" height="386" alt="Аврора.">
+                </picture>
+
                 <h3>Круиз “Аврора”</h3>
 
                 <dl>
@@ -234,10 +275,17 @@
                   <dd>от&nbsp;11700&nbsp;$</dd>
                 </dl>
 
-                <a class="catalog__button" href="Alline.html">Забронировать</a>
+                <a class="catalog__button" href="#">Забронировать</a>
               </li>
 
-              <li class="catalog__item catalog__item--leonor" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-leonor-mobile.webp, img/catalog/cruises-leonor-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-leonor-tablet.webp, img/catalog/cruises-leonor-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-leonor-tablet.webp, img/catalog/cruises-leonor-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-leonor-tablet.jpg" srcset="img/catalog/cruises-leonor-tablet.jpg 2x" width="270" height="386" alt="Леонор.">
+                </picture>
+
                 <h3>Круиз “Леонор”</h3>
 
                 <dl>
@@ -254,10 +302,17 @@
                   <dd>от&nbsp;12500&nbsp;$</dd>
                 </dl>
 
-                <a class="catalog__button" href="Alline.html">Забронировать</a>
+                <a class="catalog__button" href="#">Забронировать</a>
               </li>
 
-              <li class="catalog__item catalog__item--minion" tabindex="0">
+              <li class="catalog__item" tabindex="0">
+                <picture>
+                  <source media="(max-width: 767.9px)" srcset="img/catalog/cruises-minion-1-mobile.webp, img/catalog/cruises-minion-1-mobile@2x.webp 2x">
+                  <source media="(max-width: 1023.9px)" srcset="img/catalog/cruises-minion-1-tablet.webp, img/catalog/cruises-minion-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog/cruises-minion-1-tablet.webp, img/catalog/cruises-minion-1-tablet@2x.webp 2x">
+                  <img class="catalog__image" loading="lazy" src="img/catalog/cruises-minion-1-tablet.jpg" srcset="img/catalog/cruises-minion-1-tablet.jpg 2x" width="270" height="386" alt="Минион - 1.">
+                </picture>
+
                 <h3>Круиз “Минион - 1”</h3>
 
                 <dl>
@@ -274,7 +329,7 @@
                   <dd>от&nbsp;12300&nbsp;$</dd>
                 </dl>
 
-                <a class="catalog__button" href="Alline.html">Забронировать</a>
+                <a class="catalog__button" href="#">Забронировать</a>
               </li>
             </ul>
           </div>
@@ -284,17 +339,17 @@
           <div class="booking__container container" data-form-validate>
             <div class="booking__text-wrapper">
               <h2>Раннее бронирование</h2>
-              <p>Забронируйте тур за&nbsp;3-6 месяцев<br> до&nbsp;даты выезда и&nbsp;сэкономьте<br> до&nbsp;50%</p>
+              <p>Забронируйте тур<br> за&nbsp;3-6 месяцев<br> до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
 
-            <form class="booking__form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="booking__form" action="https://echo.htmlacademy.ru" method="post" novalidate>
               <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
 
               <label aria-label="Введите имя." data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <input type="text" name="name" id="name" placeholder="Имя" required>
               </label>
 
-              <label aria-label="Введите телефон." data-validate-type="phone" data-on-input-validate data-required data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля" data-required>
+              <label aria-label="Введите телефон." data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
               </label>
 
@@ -312,6 +367,30 @@
             </form>
           </div>
         </section>
+
+        <section class="contacts" id="contacts">
+          <div class="contacts__container container">
+            <h2 class="visually-hidden">Контакты.</h2>
+            <div class="contacts__map" id="map"></div>
+            <div class="contacts__text-wrapper">
+              <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+
+              <address class="contacts__address">
+                <svg width="18" height="22" role="img" aria-hidden="true" focusable="false" aria-label="Адресс.">
+                  <use xlink:href="img/sprite.svg#map-mark"></use>
+                </svg>
+                <span>г. Санкт Петербург,<br> ул. Большая Конюшенная, 19/8</span>
+              </address>
+
+              <a class="contacts__phone" href="tel:+78002000000">
+                <svg width="18" height="18" role="img" aria-hidden="true" focusable="false" aria-label="Телефон.">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <span>8-800-200-00-00</span>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="main-footer">
         <div class="main-footer__container container">
@@ -326,7 +405,7 @@
 
           <ul class="main-footer__nav-list">
             <li class="main-footer__nav-item">
-              <a href="#">Преимущества</a>
+              <a href="#advantages">Преимущества</a>
             </li>
 
             <li class="main-footer__nav-item">
@@ -334,18 +413,18 @@
             </li>
 
             <li class="main-footer__nav-item">
-              <a href="#">Ближайшие круизы</a>
+              <a href="#catalog">Ближайшие круизы</a>
             </li>
 
             <li class="main-footer__nav-item">
-              <a href="#">Контакты</a>
+              <a href="#contacts">Контакты</a>
             </li>
           </ul>
 
           <ul class="main-footer__social-list">
             <li class="main-footer__social-item">
               <a href="#">
-                <svg class="main-footer__social-icon" width="20" height="20" aria-label="Одноклассники.">
+                <svg width="20" height="20" aria-label="Одноклассники.">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#social-ok"></use>
                 </svg>
               </a>
@@ -353,7 +432,7 @@
 
             <li class="main-footer__social-item">
               <a href="#">
-                <svg class="main-footer__social-icon" width="20" height="20" aria-label="Вконтакте.">
+                <svg width="20" height="20" aria-label="Вконтакте.">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#social-dzen"></use>
                 </svg>
               </a>
@@ -361,7 +440,7 @@
 
             <li class="main-footer__social-item">
               <a href="#">
-                <svg class="main-footer__social-icon" width="20" height="20" aria-label="Пинтерест.">
+                <svg width="20" height="20" aria-label="Пинтерест.">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#social-reddit"></use>
                 </svg>
               </a>
@@ -372,6 +451,7 @@
       </footer>
     </div>
 
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" async></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initMenu} from './utils/toggle-menu';
 import {Form} from './modules/form-validate/form';
+import {getMap} from './modules/map.js';
 
 // ---------------------------------
 
@@ -10,16 +11,18 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+
   // Modules
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initMenu();
     const form = new Form();
     window.form = form;
     form.init();
+    initMenu();
+    getMap();
   });
 });
 

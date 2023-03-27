@@ -1,18 +1,18 @@
 .advantages {
-  padding: 110px 0 96px;
+  padding: 110px 0 120px;
   color: $color-dark-blue;
-  background: url(../img/advantages-background.jpg);
+  background: url("../img/advantages-background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 2;
 
   @include vp-1023 {
-    padding: 88px 0 88px;
+    padding: 90px 0 100px;
   }
 
   @include vp-767 {
-    padding: 54px 0 25px;
+    padding: 54px 0 68px;
   }
 
   &::before {
@@ -66,11 +66,12 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    gap: 31px;
   }
 }
 
 .advantages__item {
-  padding: 87px 30px 50px 30px;
+  padding: 79px 30px 45px;
   background-color: $color-white;
   position: relative;
 
@@ -93,17 +94,33 @@
   }
 
   @include vp-1023 {
-    padding: 76px 16px 25px 20px;
+    padding: 69px 16px 21px 20px;
+
+    &::before {
+      top: 25px;
+    }
+
+    &--liner::before {
+      content: url("../img/svg/advantages-liner-small.svg");
+    }
+
+    &--all-inclusive::before {
+      content: url("../img/svg/advantages-all-inclusive-small.svg");
+    }
+
+    &--tours::before {
+      content: url("../img/svg/advantages-tours-small.svg");
+    }
   }
 
   @include vp-767 {
-    padding: 76px 15px 25px 20px;
+    padding: 70px 15px 20px 20px;
   }
 }
 
 .advantages h3 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -117,7 +134,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     br {
       display: block;
