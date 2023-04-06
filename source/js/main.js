@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     initMenu();
-    getMap();
+    setTimeout(getMap, 3000);
   });
 });
 

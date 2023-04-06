@@ -109,6 +109,8 @@
 
 .contacts__phone {
   margin-bottom: 8px;
+  display: block;
+  width: max-content;
 
   @include hover-focus {
     text-decoration: underline;
