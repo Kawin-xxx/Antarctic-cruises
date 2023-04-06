@@ -159,23 +159,24 @@
     color: $color-dark-blue-opacity;
     font-size: 14px;
   }
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
 }
 
 .booking__checkbox {
   display: flex;
   align-items: center;
-
-  br {
-    display: none;
-  }
+  cursor: pointer;
 
   @include vp-767 {
     gap: 8px;
     justify-content: flex-start;
+  }
 
-    br {
-      display: block;
-    }
+  @include hover-focus {
+    opacity: 0.8;
   }
 }
 
@@ -242,6 +243,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;

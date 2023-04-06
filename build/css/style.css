@@ -709,20 +709,18 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (-webkit-max-content)[4];
+  -ms-grid-columns: (max-content)[4];
+  grid-template-columns: repeat(4, -webkit-max-content);
+  grid-template-columns: repeat(4, max-content);
   -webkit-column-gap: 33px;
   -moz-column-gap: 33px;
   column-gap: 33px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .main-header__site-item.focus-visible:focus a {
@@ -792,11 +790,6 @@ button,
   padding: 112px 0 145px 0;
 }
 
-.info__image-wrapper {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
 .info__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -811,6 +804,7 @@ button,
 
 .info__text-wrapper {
   color: #011c40;
+  width: 45%;
 }
 
 .info__text-wrapper h2 {
@@ -819,6 +813,9 @@ button,
   font-size: 28px;
   line-height: 42px;
   margin-bottom: 23px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 .info__text-wrapper h2 br {
@@ -977,7 +974,7 @@ button,
   overflow-y: scroll;
   background-color: #011c40;
   padding: 28px 31px 23px;
-  height: 386px;
+  min-height: 386px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1037,7 +1034,7 @@ button,
 .catalog__image {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   left: 0;
   top: 0;
   z-index: 0;
@@ -1084,6 +1081,11 @@ button,
   font-size: 14px;
   line-height: 21px;
   display: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .catalog__button.focus-visible:focus {
@@ -1197,6 +1199,10 @@ button,
   font-size: 14px;
 }
 
+.booking__form input.focus-visible:focus {
+  opacity: 0.9;
+}
+
 .booking__checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1204,10 +1210,11 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
 }
 
-.booking__checkbox br {
-  display: none;
+.booking__checkbox.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .booking__checkbox input {
@@ -1274,6 +1281,10 @@ button,
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .booking__button.focus-visible:focus {
@@ -1350,6 +1361,10 @@ button,
 
 .contacts__phone {
   margin-bottom: 8px;
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .contacts__phone.focus-visible:focus {
@@ -1537,6 +1552,7 @@ button,
   }
 
   .info__text-wrapper {
+    width: 48%;
     margin-top: -10px;
   }
 
@@ -1872,6 +1888,10 @@ button,
     padding: 60px 0 88px 0;
   }
 
+  .info__image-wrapper {
+    width: 100%;
+  }
+
   .info__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1883,6 +1903,7 @@ button,
   }
 
   .info__text-wrapper {
+    width: 100%;
     margin-bottom: 43px;
   }
 
@@ -1893,6 +1914,8 @@ button,
 
   .info__image-wrapper img {
     width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .advantages {
@@ -1942,6 +1965,8 @@ button,
   .catalog__item {
     background-position: bottom;
     padding: 28px 31px 17px 24px;
+    height: auto;
+    aspect-ratio: 1/1.42;
   }
 
   .catalog__item:hover,
@@ -1995,10 +2020,6 @@ button,
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-  }
-
-  .booking__checkbox br {
-    display: block;
   }
 
   .booking__checkbox-mark {
@@ -2091,6 +2112,14 @@ button,
   }
 
   .catalog__button:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .booking__form input:hover:not(.focus-visible) {
+    opacity: 0.9;
+  }
+
+  .booking__checkbox:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 

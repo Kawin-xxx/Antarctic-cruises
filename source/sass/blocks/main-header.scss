@@ -93,11 +93,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
   column-gap: 33px;
+  align-items: center;
 
   @include vp-1023 {
     column-gap: 24px;
