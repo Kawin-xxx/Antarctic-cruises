@@ -813,6 +813,9 @@ button,
   font-size: 28px;
   line-height: 42px;
   margin-bottom: 23px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 .info__text-wrapper h2 br {
@@ -1078,10 +1081,9 @@ button,
   font-size: 14px;
   line-height: 21px;
   display: none;
-  -moz-user-select: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
 }
 
@@ -1278,10 +1280,9 @@ button,
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  -moz-user-select: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
 }
 
